@@ -4,31 +4,37 @@ import React from 'react'
 
 export class Card extends React.Component{
   render(){
+    const bugs = [
+      {id:1,assignedTo:"timo",desc:"virus"},
+      {id:2,assignedTo:"fenetta",desc:"worm"}
+    ]
     return (
-
-      <div>
-      <hr/>
-      <div className="card">
-        <header className="card-header">
-          <p className="card-header-title">
-          BugId: 12405
-          </p>
-        </header>
-        <div className="card-content">
-          <div className="content">
-            Hello
-            <span className="tag is-info">Timo</span>
-            <p>Assigned To: Ayam</p>
+      <div>{
+      bugs.map((bug,index)=>{
+        return(
+        <div key={bug.id} className="card">
+          <header className="card-header">
+            <p className="card-header-title">
+            BugId: {bug.id}
+            </p>
+          </header>
+          <div className="card-content">
+            <div className="content">
+              {bug.desc}
+              <span className="tag is-info">Timo</span>
+              <p>Assigned To: {bug.assignedTo}</p>
+            </div>
+            <br/>
+            <small className="tag is-primary">close</small>
           </div>
-          <br/>
-          <small className="tag is-primary">close</small>
+          <footer className="card-footer">
+            <a  className="is-warning card-footer-item">Close</a>
+            <a className="card-footer-item" >Delete</a>
+          </footer>
         </div>
-        <footer className="card-footer">
-          <a onclick="" className="is-warning card-footer-item">Close</a>
-          <a className="card-footer-item" onclick="">Delete</a>
-        </footer>
-      </div>
-        <br/>
+      )
+      })
+    }
       </div>
 
 

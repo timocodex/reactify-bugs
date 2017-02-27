@@ -9,7 +9,9 @@ class Bodz extends React.Component{
       <div>
         <Header />
         <Isi />
+
         <Card />
+      
         <Footer />
       </div>
     )

@@ -11,11 +11,11 @@ export class Isi extends React.Component{
       <div className="hero-body">
         <h2 className="title">Add New Bug Report:</h2>
         <form action="" id="bugInputForm">
-          <label className="label" for="">Description</label>
+          <label className="label" >Description</label>
           <p className="control">
             <input className="input" type="text" id="description" placeholder="Describe a bug..." />
           </p>
-          <label className="label" for="">Severity</label>
+          <label className="label" >Severity</label>
           <p className="control">
             <span className="select">
               <select id="severity" name="severity">
@@ -25,7 +25,7 @@ export class Isi extends React.Component{
               </select>
             </span>
           </p>
-          <label className="label" for="">Assigned To</label>
+          <label className="label" >Assigned To</label>
           <p className="control">
             <input className="input" type="text" id="assignedTo" placeholder="Enter responsible..." />
           </p>
