@@ -1,12 +1,19 @@
-console.log('hello Bandung!');
-
 import React from 'react'
 import {render} from 'react-dom'
 
-class Hello extends React.Component{
+import {Header,Footer,Isi,Card} from './components'
+
+class Bodz extends React.Component{
   render(){
-    return <p> Hello bandung tes lah lagi</p>
+    return (
+      <div>
+        <Header />
+        <Isi />
+        <Card />
+        <Footer />
+      </div>
+    )
   }
 }
 
-render(<Hello />,document.getElementById('app'))
+render(<Bodz />,document.getElementById('app'))
